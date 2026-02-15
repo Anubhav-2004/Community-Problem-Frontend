@@ -150,10 +150,13 @@ export default function Landing() {
           </span>
 
           <div className="flex gap-5 text-sm">
-            <a href="#" className="hover:text-blue-200 transition">About</a>
-            <a href="#" className="hover:text-blue-200 transition">Contact</a>
-            <a href="#" className="hover:text-blue-200 transition">GitHub</a>
-          </div>
+          <a href="/" className="hover:text-blue-200 transition">About</a>
+          <a href="/" className="hover:text-blue-200 transition">Contact</a>
+          <a href="https://github.com/Anubhav-2004" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition">
+            GitHub
+          </a>
+        </div>
+
 
         </div>
       </footer>
