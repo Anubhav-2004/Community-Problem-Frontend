@@ -6,11 +6,9 @@ export default function Landing() {
     <>
       <Navbar />
 
-      {/* HERO */}
       <section className="min-h-screen bg-gray-50 pt-24 flex items-center">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
-          {/* LEFT */}
           <div>
             <h1 className="text-5xl font-semibold leading-tight mb-4">
               Report community issues easily
@@ -29,9 +27,12 @@ export default function Landing() {
                 Raise Issue
               </a>
 
-              <button className="border px-7 py-3 rounded hover:bg-gray-100 transition">
+              <a
+                href="#learn-more"
+                className="border px-7 py-3 rounded hover:bg-gray-100 transition"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
 
             <div className="flex gap-6 text-sm text-gray-600">
@@ -50,9 +51,7 @@ export default function Landing() {
             </div>
           </div>
 
-          {/* RIGHT — LIVE ISSUE PREVIEW */}
           <div className="space-y-4">
-
             <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
               <h4 className="font-medium">Broken street light</h4>
               <p className="text-sm text-gray-500">Sector 12 • Reported</p>
@@ -67,12 +66,45 @@ export default function Landing() {
               <h4 className="font-medium">Garbage not collected</h4>
               <p className="text-sm text-gray-500">Block B • Resolved</p>
             </div>
-
           </div>
+
         </div>
       </section>
 
-      {/* FEATURES */}
+      <section id="learn-more" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <h2 className="text-3xl font-semibold mb-4">
+              What is CommunityCare?
+            </h2>
+
+            <p className="text-gray-600 mb-4">
+              CommunityCare is a simple platform that allows people to report local
+              problems and track their resolution transparently.
+            </p>
+
+            <p className="text-gray-600">
+              Users can upload photos, add descriptions and provide location details
+              so issues can be solved faster by responsible authorities.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="bg-gray-50 p-5 rounded-lg border">
+              Report issues in seconds
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg border">
+              Attach photos for clarity
+            </div>
+            <div className="bg-gray-50 p-5 rounded-lg border">
+              Track progress in real time
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -110,19 +142,21 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-blue-600 text-white text-center">
-        <h2 className="text-3xl font-semibold mb-4">
-          Start improving your community today
-        </h2>
+      <footer className="bg-blue-600 py-6 text-white">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3">
 
-        <a
-          href="/report"
-          className="bg-white text-blue-600 px-8 py-3 rounded font-medium"
-        >
-          Create Issue
-        </a>
-      </section>
+          <span className="font-medium">
+            © {new Date().getFullYear()} CommunityCare
+          </span>
+
+          <div className="flex gap-5 text-sm">
+            <a href="#" className="hover:text-blue-200 transition">About</a>
+            <a href="#" className="hover:text-blue-200 transition">Contact</a>
+            <a href="#" className="hover:text-blue-200 transition">GitHub</a>
+          </div>
+
+        </div>
+      </footer>
     </>
   );
 }
